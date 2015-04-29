@@ -7,7 +7,7 @@ var mount = require('koa-mount');
 var React = require('react');
 var _ = require('lodash');
 var fs = require('fs');
-
+ 
 var baseTemplate = fs.readFileSync('./baseTemplate.html');
 var ClientApp = require('./jsx/index.jsx');
 
@@ -17,6 +17,7 @@ app.use(mount('/fa', serve('../node_modules/font-awesome')));
 app.use(mount('/public', serve('./public')));
 
 app.use(route.get('/', function *() {
+  console.log('rendering');
   var rendered = React.renderToString(React.createElement(ClientApp));
   this.body = _.template(baseTemplate)({body:rendered});
 }));
