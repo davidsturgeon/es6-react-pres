@@ -48,3 +48,7 @@ The project includes some images and info from [Netflix](http://www.netflix.com)
 ## Project Author
 
 :heart: [Brian Holt](http://twitter.com/holtbt)
+
+## Project Modder
+
+:heart: [David Sturgeon](http://twitter.com/dsturgeo)
