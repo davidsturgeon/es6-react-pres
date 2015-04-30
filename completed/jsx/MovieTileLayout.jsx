@@ -1,5 +1,7 @@
 var React = require('react');
 var RatingStars = require('./RatingStars');
+var MovieTitle = require('./MovieTitle');
+var Like = require('./Like');
 
 class MovieTileLayout extends React.Component {
 
@@ -11,13 +13,14 @@ class MovieTileLayout extends React.Component {
           <div className="movie-tile__img" style={{'backgroundImage': `url(${img})`}} />
         </div>
         <div className="movie-tile__info">
-          <h1 className="movie-tile__title">{this.props.Title}</h1>
+          <MovieTitle Title={this.props.Title} />
           <h2 className="movie-tile__year">({this.props.Year})</h2>
           <div className="movie-tile__stars">
-            <RatingStars
+            <RatingStars 
               max={10}
               score={this.props.imdbRating}
             />
+            <Like /> 
           </div>
         </div>
       </div>
